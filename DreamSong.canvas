@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"85cef1e692ef6b24","type":"file","file":"ComplicatedVsComplex/ComplicatedSystemSumOfParts.gif","x":-130,"y":-40,"width":400,"height":225},
+		{"id":"f6ead2fdbf1feff3","type":"file","file":"ComplicatedVsComplex/ComplicatedSystemAnalysable.gif","x":-130,"y":300,"width":400,"height":225},
+		{"id":"f306c63b63bf7285","type":"file","file":"ComplicatedVsComplex/ComplexSystemAcomposability.gif","x":-130,"y":620,"width":400,"height":225},
+		{"id":"f994e97690cd5b3c","type":"file","file":"ComplicatedVsComplex/ComplicatedSystemComposability.gif","x":-130,"y":-380,"width":400,"height":225},
+		{"id":"ff1243ddc4bb1167","type":"file","file":"ComplicatedVsComplex/ComplexSystemMoreThanSumOfParts.gif","x":-130,"y":940,"width":400,"height":225},
+		{"id":"a83123fbd58221fc","type":"file","file":"ComplicatedVsComplex/ComplicatedSystemFiniteBoundedPhaseSpace.gif","x":-130,"y":1260,"width":400,"height":225},
+		{"id":"95b1d6d001236ddf","type":"file","file":"ComplicatedVsComplex/ComplicatedSystemPhaseSpaceSize.gif","x":-130,"y":1580,"width":400,"height":225},
+		{"id":"9f0ce4167bc617ad","type":"file","file":"ComplicatedVsComplex/ComplexSystemEvolvingUnboundedPhaseSpace.gif","x":-130,"y":1900,"width":400,"height":225},
+		{"id":"110b0923c266742c","type":"text","text":"Any system can be classified unambiguously as a complicated system by examining it for the property of composability inherent to the complicated domain\nThat is, any complicated can, in principle, be taken apart into its constituent parts and put together again without permanently altering its properties","x":460,"y":-375,"width":400,"height":220},
+		{"id":"3055faf47227dc98","type":"text","text":"As such, complicated systems can meaningfully be understood as the sum of their parts","x":460,"y":-40,"width":400,"height":225},
+		{"id":"5b83c909a3588f5b","type":"text","text":"Complex systems on the other hand emerge from a relational field\nAs such they cannot be taken apart and put together again without permanent damage since this action constitutes a disruption of the relational field","x":460,"y":620,"width":400,"height":225},
+		{"id":"e816af8bc041e947","type":"text","text":"Therefore, a complex system is so much more than the sum of its parts\nIt is the sum of the parts plus all the countless properties of the relational field between them that fundamentally exceed a reductionist understanding","x":460,"y":940,"width":400,"height":225},
+		{"id":"1dd906e5bd7b5834","type":"text","text":"Another helpful lens through which we can differentiate these two types of systems is the concept of phase space\nA phase space is a mathematical space that has as many dimensions as the system it is describing has effective degrees of freedom\nAny point in the phase space corresponds to a unique state of the system\nThe phase space of a complicated system is finite, bounded and static","x":460,"y":1260,"width":400,"height":225},
+		{"id":"50cc3b4e258910a7","type":"text","text":"The simpler the system the smaller (lower dimensional) its phase space\nThe more complicated the system the larger (higher dimensional) its phase space\nA tic-tac-toe game for example has a relatively small phase space as there are a quite limited amount of possible states the game can occupy\nA Boeing 747 on the other hand is many orders of magnitude more complicated and consequently has a dramatically larger phase space","x":460,"y":1580,"width":400,"height":225},
+		{"id":"b6e03cbd8103e1a3","type":"text","text":"The phase space of a complex system is much more elusive and harder to map as the degrees of freedom of the relational field are less well defined and evade reductionist analysis\nAs such it is fundamentally infinite, unbounded and evolving\nThrough the phenomena of emergence the potential of the system is constantly growing and changing as is inherent to any living system","x":460,"y":1900,"width":400,"height":220},
+		{"id":"692473be62c228cc","type":"text","text":"This also means a such a system can be dealt with in a reductionist manner\nBy analysing and mapping its constituent parts one can gradually build up an understanding of the entire system","x":460,"y":300,"width":400,"height":225}
+	],
+	"edges":[
+		{"id":"4ddb1a3403b0c4e0","fromNode":"110b0923c266742c","fromSide":"bottom","toNode":"85cef1e692ef6b24","toSide":"top"},
+		{"id":"4734e5948882fce7","fromNode":"692473be62c228cc","fromSide":"bottom","toNode":"f306c63b63bf7285","toSide":"top"},
+		{"id":"4e696027124fa959","fromNode":"5b83c909a3588f5b","fromSide":"bottom","toNode":"ff1243ddc4bb1167","toSide":"top"},
+		{"id":"326ffd99e8cfe049","fromNode":"e816af8bc041e947","fromSide":"bottom","toNode":"a83123fbd58221fc","toSide":"top"},
+		{"id":"aa104c9055387566","fromNode":"1dd906e5bd7b5834","fromSide":"bottom","toNode":"95b1d6d001236ddf","toSide":"top"},
+		{"id":"64158458e8037f0a","fromNode":"50cc3b4e258910a7","fromSide":"bottom","toNode":"9f0ce4167bc617ad","toSide":"top"},
+		{"id":"ec681c7772caaa78","fromNode":"f994e97690cd5b3c","fromSide":"right","toNode":"110b0923c266742c","toSide":"left"},
+		{"id":"556ac9239b4789d1","fromNode":"85cef1e692ef6b24","fromSide":"right","toNode":"3055faf47227dc98","toSide":"left"},
+		{"id":"a5201146473028a0","fromNode":"3055faf47227dc98","fromSide":"bottom","toNode":"f6ead2fdbf1feff3","toSide":"top"},
+		{"id":"538b6e0c4731269b","fromNode":"f6ead2fdbf1feff3","fromSide":"right","toNode":"692473be62c228cc","toSide":"left"},
+		{"id":"e2ea5da0435c99b4","fromNode":"f306c63b63bf7285","fromSide":"right","toNode":"5b83c909a3588f5b","toSide":"left"},
+		{"id":"49c04e22962e8243","fromNode":"ff1243ddc4bb1167","fromSide":"right","toNode":"e816af8bc041e947","toSide":"left"},
+		{"id":"0fcb7da7971cece3","fromNode":"a83123fbd58221fc","fromSide":"right","toNode":"1dd906e5bd7b5834","toSide":"left"},
+		{"id":"841d71727927d593","fromNode":"95b1d6d001236ddf","fromSide":"right","toNode":"50cc3b4e258910a7","toSide":"left"},
+		{"id":"acfe9a5a662ccfa8","fromNode":"9f0ce4167bc617ad","fromSide":"right","toNode":"b6e03cbd8103e1a3","toSide":"left"}
+	]
+}
