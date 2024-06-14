@@ -12,9 +12,13 @@ async function fetchCanvasData() {
   }
 }
 
-// Function to extract the file name from the file path
-function getFileName(filePath) {
-  return filePath.split('/').pop();
+// Function to get the relative path of the file, excluding the canvas parent folder
+function getFilePath(filePath) {
+  const canvasParentFolder = 'ComplicatedVsComplex';
+  if (filePath.startsWith(canvasParentFolder + '/')) {
+    return filePath.substring(canvasParentFolder.length + 1); // Remove the parent folder from the path
+  }
+  return filePath; // Return the original path if no parent folder match
 }
 
 // Function to sort nodes based on edges
@@ -70,7 +74,7 @@ function renderLinearFlow(nodes) {
 
     if (node.type === 'file') {
       const imgElement = document.createElement('img');
-      imgElement.src = getFileName(node.file); // Use only the file name
+      imgElement.src = getFilePath(node.file); // Use the full relative path without the parent folder
       imgElement.style.width = '1000px';
       imgElement.style.height = '900px';
       imgElement.style.objectFit = 'contain';
