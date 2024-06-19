@@ -1,6 +1,9 @@
 {
   "ComplexSystemEvolvingUnboundedPhaseSpace.gif": null,
   "index.html": null,
+  "styles.css": null,
+  "ComplexSystemEvolvingUnboundedPhaseSpace.m4v": null,
+  "ComplexSystemEvolvingUnboundedPhaseSpace.mp4": null,
   "update_submodules.py": null,
   "README.md": null,
   "directory-listing.json": null,
@@ -28,5 +31,6 @@
     "IndustrialRobot.svg": null,
     "ManMachineNature.key": null,
     "TwoRealms.gif": null
-  }
+  },
+  "parent_directory": "ComplicatedVsComplex"
 }

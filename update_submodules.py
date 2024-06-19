@@ -46,26 +46,52 @@ def update_submodules(repos):
             for line in file:
                 if 'path' in line:
                     current_submodules.append(line.split('=')[1].strip())
+    
     # Determine submodules to add and remove
     to_add = set(repos) - set(current_submodules)
     to_remove = set(current_submodules) - set(repos)
+    
     # Add new submodules
     for repo in to_add:
         url = f"{BASE_URL}{repo}.git"
         subprocess.run(['git', 'submodule', 'add', url, repo])
-    # Remove old submodules
+    
+    # Update the submodules to the latest commit
+    subprocess.run(['git', 'submodule', 'update', '--init', '--recursive'])
+    
+    # Generate a list of currently used submodules by parsing canvas file
+    used_submodules = get_used_submodules(CANVAS_FILE)
+
+    # Remove old submodules that are not used
     for repo in to_remove:
-        # don't remove LiminalWebUI itself
-        if repo == "LiminalWebUI":
+        if repo in used_submodules:
             continue
         subprocess.run(['git', 'submodule', 'deinit', '-f', repo])
         subprocess.run(['git', 'rm', '-f', repo])
         subprocess.run(['rm', '-rf', f'.git/modules/{repo}'])
-    # Update the submodules
-    subprocess.run(['git', 'submodule', 'update', '--init', '--recursive'])
+
+def get_used_submodules(file_path):
+    # Parse the canvas file to get the list of used submodules
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    
+    parent_folder = os.path.basename(os.path.dirname(os.path.abspath(file_path)))
+    used_submodules = set()
+    
+    for node in data['nodes']:
+        if node['type'] == 'file':
+            file_path = node['file']
+            if file_path.startswith(parent_folder):
+                relative_path = file_path[len(parent_folder)+1:]
+                if '/' in relative_path:
+                    submodule = relative_path.split('/')[0]
+                    used_submodules.add(submodule)
+    
+    return used_submodules
 
 def generate_directory_listing(root_dir):
     directory_listing = {}
+    parent_directory = os.path.basename(os.getcwd())
 
     for root, dirs, files in os.walk(root_dir):
         dirs[:] = [d for d in dirs if not d.startswith('.')]  # Filter out hidden directories
@@ -85,6 +111,8 @@ def generate_directory_listing(root_dir):
         for dir in dirs:
             dir_path = os.path.join(relative_root, dir)
             current_dir[dir] = {}
+
+    directory_listing["parent_directory"] = parent_directory
 
     return directory_listing
 

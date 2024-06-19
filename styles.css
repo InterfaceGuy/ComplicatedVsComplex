@@ -13,7 +13,7 @@ body {
 }
 
 #canvas-container {
-  width: 80%; /* Adjust this percentage as needed */
+  width: 100%; /* Adjust this percentage as needed */
   max-width: 2600px; /* Set a max width for very large screens */
   padding: 20px;
   background-color: #000000;
@@ -31,7 +31,7 @@ body {
 
 .media {
   flex: 1;
-  max-width: 80%;
+  max-width: 50%;
   object-fit: contain;
   margin-left: 50px;
   margin-right: 50px;
