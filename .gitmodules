@@ -1,3 +1,6 @@
 [submodule "ManMachineNature"]
 	path = ManMachineNature
 	url = https://github.com/InterfaceGuy/ManMachineNature.git
+[submodule "DreamSongUI"]
+	path = DreamSongUI
+	url = https://github.com/InterfaceGuy/DreamSongUI
